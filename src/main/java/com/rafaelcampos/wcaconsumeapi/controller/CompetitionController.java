@@ -24,7 +24,7 @@ public class CompetitionController {
 		return ResponseEntity.ok(competitions);
 	}
 
-	@GetMapping("/{city}")
+	@GetMapping("/cities/{city}")
 	public ResponseEntity<List<CompetitionDTO>> findByCity(@PathVariable String city) {
 		List<CompetitionDTO> competitions = competitionService.findByCity(city);
 
